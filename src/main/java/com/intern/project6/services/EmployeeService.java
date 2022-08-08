@@ -4,15 +4,21 @@ import com.intern.project6.exceptions.EmployeeNotFoundException;
 import com.intern.project6.models.Employee;
 import com.intern.project6.repositories.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 @Service
 public class EmployeeService {
-    @Autowired
+
     EmployeeRepository employeeRepository;
+    @Autowired
+    public EmployeeService(EmployeeRepository employeeRepository){
+        this.employeeRepository = employeeRepository;
+    }
 
     public Employee getEmployee(String id) {
         Optional<Employee> byId = employeeRepository.findById(id);
