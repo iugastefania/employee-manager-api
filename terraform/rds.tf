@@ -3,7 +3,7 @@ resource "aws_db_instance" "default" {
   engine               = "mysql"
   engine_version       = "8.0.28"
   instance_class       = "db.t3.micro"
-  identifier           = "employee3"
+  identifier           = "employee2"
   username             = "admin"
   password             = "admin123"
   skip_final_snapshot  = true

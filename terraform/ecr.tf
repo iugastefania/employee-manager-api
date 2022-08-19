@@ -1,5 +1,5 @@
 resource "aws_ecr_repository" "foo" {
-  name                 = "employee3"
+  name                 = "employee2"
   image_tag_mutability = "MUTABLE"
 
   image_scanning_configuration {

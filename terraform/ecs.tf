@@ -1,5 +1,5 @@
 resource "aws_ecs_task_definition" "service" {
-  family = "task3"
+  family = "task2"
   requires_compatibilities = ["EC2"]
   container_definitions = jsonencode([
     {
