@@ -14,10 +14,7 @@ public class EmployeeController {
 
     @Autowired
     EmployeeService employeeService;
-    @GetMapping("/getHello")
-    public String getHello(){
-        return "Hello!";
-    }
+
     @GetMapping("/getEmployee/{id}")
     public ResponseEntity<Employee> getEmployee(@PathVariable String id){
         Employee employee = employeeService.getEmployee(id);
