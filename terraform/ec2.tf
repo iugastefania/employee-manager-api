@@ -6,6 +6,6 @@ resource "aws_instance" "web" {
   iam_instance_profile = aws_iam_instance_profile.ec2_profile.name
 }
 resource "aws_iam_instance_profile" "ec2_profile" {
-  name = "ec2_profile"
-  role = aws_iam_role.ec2_role.name
+    name = "ec2_profile"
+    role = aws_iam_role.ec2_role.name
 }
